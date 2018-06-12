@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeItem"
+        android:title="Início"
+        android:icon="@drawable/ic_launcher_background"
+        />
+    <item
+        android:id="@+id/atosItem"
+        android:title="Atos"
+        android:icon="@drawable/ic_launcher_background"/>
+
+    <item
+        android:id="@+id/interacaoItem"
+        android:title="Interação"
+        android:icon="@drawable/ic_launcher_background"/>
+    <item
+        android:id="@+id/sobreItem"
+        android:title="Sobre"
+        android:icon="@drawable/ic_launcher_background"/>
+
+    <!--<item-->
+    <!--android:id="@+id/optItem"-->
+    <!--android:title="Opções"-->
+    <!--android:icon="@drawable/ic_action_gear"/>-->
+
+</menu>

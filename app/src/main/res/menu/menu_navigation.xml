@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeItem"
-        android:title="Início"
+        android:title="@string/Home"
         android:icon="@drawable/ic_launcher_background"
         />
     <item
         android:id="@+id/atosItem"
-        android:title="Atos"
+        android:title="@string/Atos"
         android:icon="@drawable/ic_launcher_background"/>
 
     <item
         android:id="@+id/interacaoItem"
-        android:title="Interação"
+        android:title="@string/Interaction"
         android:icon="@drawable/ic_launcher_background"/>
     <item
         android:id="@+id/sobreItem"
-        android:title="Sobre"
+        android:title="@string/About"
         android:icon="@drawable/ic_launcher_background"/>
 
     <!--<item-->

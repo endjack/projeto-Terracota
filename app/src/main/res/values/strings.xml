@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Terracota</string>
+    <string name="AppName">Terracota</string>
+    <string name="Home">Início</string>
+    <string name="Atos">Atos</string>
+    <string name="Interaction">Interação</string>
+    <string name="About">Sobre</string>
 </resources>

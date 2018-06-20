@@ -5,4 +5,7 @@
     <string name="Atos">Atos</string>
     <string name="Interaction">Interação</string>
     <string name="About">Sobre</string>
+    <string name="numberAto">Ato 01</string>
+    <string name="titleList">Título</string>
+    <string name="descriptionList">Descrição</string>
 </resources>

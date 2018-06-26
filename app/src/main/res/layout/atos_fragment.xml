@@ -3,14 +3,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:orientation="vertical"
+    android:background="@color/back"
+    >
+
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        app:title="Terracota"
+        app:subtitle="Atos da Ópera"
+        app:titleTextColor="@android:color/black"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbarAtos"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!--Lista com Atos-->
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_atos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white">
-    </android.support.v7.widget.RecyclerView>
+            android:id="@+id/recycler_view_atos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </android.support.v7.widget.RecyclerView>
+
 
 </LinearLayout>

@@ -22,6 +22,7 @@
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
             android:background="@drawable/back_home">
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbarLayoutHome"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"

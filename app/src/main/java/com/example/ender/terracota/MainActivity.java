@@ -1,5 +1,8 @@
 package com.example.ender.terracota;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +11,12 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int ID_NOTIFICATION = 0x256587a4;
+
     private BottomNavigationView bottomNavigationView;
+    private PendingIntent pendingIntent;
+    private Notification boasVindasNotificacao;
+    private NotificationManager nm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +28,22 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.frame_layout,new FragmentMain())
                 .commit();
 
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
+//      Notificação de Boas Vindas
+        pendingIntent = PendingIntent.getActivity(getApplicationContext(),
+                ID_NOTIFICATION, getIntent(), PendingIntent.FLAG_UPDATE_CURRENT);
 
+        boasVindasNotificacao = new Notification.Builder(getApplicationContext())
+                .setContentTitle("Terracota Ópera")
+                .setContentText("Bem-vindo(a)! Agora você poderá ver tudo sobre a Terracota Ópera")
+                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setContentIntent(pendingIntent).build();
+
+        nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        boasVindasNotificacao.flags = Notification.FLAG_AUTO_CANCEL;
+        chamarNotificacao(boasVindasNotificacao);
+
+//      Menu de Navegação
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -60,5 +82,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void chamarNotificacao(Notification notification) {
+        nm.notify(ID_NOTIFICATION, notification);
     }
 }
